@@ -1,0 +1,12 @@
+
+1   The body  of AddTwo(x)  seems to  be inlined into  the call  of main rendering the function useless (nobody else is calling it). 
+Then why is the definition of AddTwo(x) still there all the way till the last pass (B-1.c.*.optimized)?
+
+Ans - This is because other files may include this function by header file of this file in that time this function will also be property of other file.
+
+
+2   Is there any way to get rid of it?
+
+Ans - Declaration of function which limits contents of this file within itself may remove defination of this function later.
+like a declaration by 'static' keyword which restrict the function within itself. 
+

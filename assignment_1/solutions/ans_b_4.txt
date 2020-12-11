@@ -1,0 +1,11 @@
+
+1   How many  times is the expression  (a + c) computed  in the original code (as seen in the SSA pass)? 
+What about after the FRE pass?
+
+ANS -  In the SSA pass it is calculated twice. But in the FRE pass it is calculated only once.
+
+       
+2   Have  there been  any more  optimizations  after FRE?  How will  you check?
+
+Ans - The   file  B-4.c.*.optimized. This  is  the   last  GIMPLE intra-procedural pass.
+If it is same as the output of FRE, then no more optimizations have occured.

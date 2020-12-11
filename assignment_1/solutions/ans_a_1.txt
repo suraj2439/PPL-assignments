@@ -1,0 +1,27 @@
+1.	How  do the  declarations  look in  the  GIMPLE? Specifically,  
+what happens to multiple  variables declared and initialized  on the same?
+
+Ans-  In GIMPLE declaration look same as we declare single variable in c.
+Multiple variables declared on same line are broken down and declared as an seperate declaration like a single variable declaration.
+variable declaration and initialization on same line are broken down and first only declaration and then it is initialized according to value given to that variable.
+
+
+
+2.	How are complex  expressions such as [c  = a * b +  25] broken down?
+Can you  determine a  rule as  to when  temporary variables  will be introduced?
+
+Ans-  Complex expression are broken down to form single simple instruction(which carries only one operation) whose result is stored in temporary variables created by machine and then final complex expression is evaluated by taking results from these temporary variables.
+	
+
+
+3.	How are  floats/doubles represented in  GIMPLE? What happens  when a float/double is assigned to an integer in [Z = r]?
+   
+Ans-  Floats and double are represented in their exponantial forms(also called as scintific form),  
+Assigning float/double to integer[Z = r] is an implicit type conversion it is done by explicit type caste.
+
+
+
+4.	How  are reads/writes  to the  global variable  Z performed?  
+Why is there a temporary introduced  for the statement [Z = Z  + 1] but not for the statements [q = Z] or [Z = p]?
+
+Ans-  In GIMPLE each statement can perform atmost one operation. In statements [q = Z] or [Z = q] there is only one operation that is to load global vaiable into local variable or to load local variable into global so it is one operation. But in [Z = Z + 1] it has to first load contents of Z from memory(wherever global variable Z is stored) and then increment it by one so that becomes two operations that is why it is done by using temporary variable.

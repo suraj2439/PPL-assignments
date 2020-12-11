@@ -1,0 +1,5 @@
+
+
+1   What will happen if "a = a + N" is replaced by "a = a + 1"?
+
+Ans - If a = a + N is replaced by a = a + 1 then N will never called. Loop will be unrolled and a will icrease constantly by 1. Final result will be equivalent to return a + 4

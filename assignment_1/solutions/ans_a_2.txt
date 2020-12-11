@@ -1,0 +1,8 @@
+
+1.   How have if-blocks  been translated into GIMPLE  statements? 
+Can you differentiate between conditional and unconditional gotos?
+
+Ans - if-blocks are translated into conditional jump using goto instruction. each block of if or else part will be act as one instruction whichi has one label whenever there is if then there is conditional jump to label of if block or label of else block.  unconditional jump is used at the end of if block to skip else part.
+
+
+

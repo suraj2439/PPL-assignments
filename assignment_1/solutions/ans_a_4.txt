@@ -1,0 +1,19 @@
+
+1   How is array declaration and initialization handled?
+
+Ans- array is declared just like a variable declaration,
+for initializing array, it is splitted into multiple statements in one basic block which initializes corresponding elements of array.
+
+
+2   Why does the statement a[i] = b[i] get broken down to two steps with an intermediate temporary?
+
+Ans- Gimple can do one operation at a time as reading contents of b[i] and loding it into the a[i] are two operations so it is splited into two steps and introduced temporary variable.
+
+
+
+3   Why are there CLOBBER statements at the end?
+
+Ans- CLOBBER statement is use to signify end of scope of address-escaped variable a and b.
+
+
+

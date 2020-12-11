@@ -1,0 +1,15 @@
+1   Identify the basic blocks that correspond  to the while loop. 
+How is the GIMPLE for a while loop different from simple if-else jumps?
+
+Ans- In cfg file blocks 2, 3 and 4 are corresponds to while loop. 
+There is not much significant difference between if-else jumps and while loop but only difference is that in if-else conditional jump is to next block, but in while loop conditional jump is to previous block correspndiong to while loop till the condition becomes false.
+
+
+
+2   Identify the  basic blocks  for the nested  for-loop. 
+You  should be able  to identify  intializers, conditions  and increments  for each loop as  well as  the shared  inner body.  
+Is there  really anything special about a for-loop as compared to a while-loop?
+
+Ans- Basic blocks 6, 7 and 8 are corresponds to nested for-loop.
+There is not much difference between for-loop and while-loop, the for-loop is nothing but while loop with extra initializing block and increment operation inside last of inner body.
+
